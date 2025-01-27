@@ -33,6 +33,7 @@
     padding: 1rem;
     max-height: 100vh;
     gap: 1.5rem;
+    height: 25vh;
 
     .cartao__texto {
       @extend .main__texto;
@@ -49,8 +50,10 @@
     }
 
     .buttons {
+      margin: 1rem;
       display: flex;
       justify-content: space-around;
+      align-items: flex-end;
       width: 100%;
     }
   }

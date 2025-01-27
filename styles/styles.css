@@ -178,6 +178,7 @@ body {
   padding: 1rem;
   max-height: 100vh;
   gap: 1.5rem;
+  height: 25vh;
 }
 .main .cartao .cartao__texto {
   color: #ddd696;
@@ -191,7 +192,9 @@ body {
   top: -2rem;
 }
 .main .cartao .buttons {
+  margin: 1rem;
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
   width: 100%;
 }/*# sourceMappingURL=styles.css.map */
