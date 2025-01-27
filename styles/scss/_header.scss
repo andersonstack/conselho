@@ -1,0 +1,7 @@
+@use "./variaveis" as *;
+
+.title {
+  text-align: center;
+  font-family: $font-principal;
+  font-size: 1rem;
+}
