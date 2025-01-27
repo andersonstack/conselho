@@ -14,6 +14,10 @@ ol[role=list] {
   list-style: none;
 }
 
+li {
+  list-style: none;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -67,8 +71,35 @@ body {
   background: linear-gradient(180deg, #ddd696, #bbb57f, #777351);
 }
 
-.title {
-  text-align: center;
+.menu {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__lista {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+.menu__lista .menu__lista-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.menu__lista .menu__lista-item img {
+  max-width: 2.5rem;
+}
+.menu__lista .menu__lista-item p {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: none;
+}
+.menu__lista li {
+  gap: 0.5rem;
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
