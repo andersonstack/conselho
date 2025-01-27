@@ -1,26 +1,54 @@
 @use "./variaveis" as *;
 
 .menu {
+  position: relative;
+  padding: 1rem 1rem 0 1rem;
   display: flex;
-  padding: 1rem;
   justify-content: space-between;
+  gap: 1rem;
+
+  .menu__botao-inicio {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-width: 2.5rem;
+
+    p {
+      display: none;
+    }
+  }
+}
+
+.menu__botao {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .menu__lista {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  width: 100%;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0 1rem 1rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0.5rem 0.5rem 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+  background-color: $cor-quatro;
 
   .menu__lista-item {
+    margin-top: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 0.5rem;
 
     img {
       max-width: 2.5rem;
+      margin-top: 1rem;
     }
 
     p {
@@ -35,4 +63,10 @@
     gap: 0.5rem;
     text-align: center;
   }
+}
+
+.menu__lista.ativo {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
