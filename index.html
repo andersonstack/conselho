@@ -55,10 +55,10 @@
       <div class="cartao" id="cartao" data-principal-div>
         <img
           src="assets/icons-black/tips.svg"
-          alt="Imagem de uma aspas"
+          alt="Imagem de 3 estrelas"
           class="cartao__imagem"
         />
-        <button>
+        <button aria-label="Botão de salvar" id="botao__bookmark" data-bookmark>
           <img
             class="bookmark"
             src="assets/icons-black/bookmark-black.svg"
@@ -70,6 +70,7 @@
         </p>
         <div class="buttons" id="buttons" data-botoes>
           <button
+            aria-label="Botão de mudasr de língua"
             class="cartao__botao-lang"
             id="cartao__botao-lang"
             data-botao-lang
@@ -77,6 +78,7 @@
             Mudar de língua
           </button>
           <button
+            aria-label="Botão de mudar de conselho"
             class="cartao__botao-api"
             id="cartao__botao-api"
             data-botao-api
@@ -90,10 +92,18 @@
         <ul class="main__lista" id="main__lista" data-lista-conselhos>
           <li class="main__lista-item" id="main__lista-item" data-lista-item>
             Conselho antigo 1
-            <button class="main__lista-item-botao" id="botao-ver">
+            <button
+              class="main__lista-item-botao"
+              id="botao-ver"
+              aria-label="Botão de visualizar conselho"
+            >
               <img src="assets/icons-black/eye-black.svg" alt="Ver conselho" />
             </button>
-            <button class="main__lista-item-botao" id="botao-remover">
+            <button
+              class="main__lista-item-botao"
+              id="botao-remover"
+              aria-label="Botão de remover conselho"
+            >
               <img
                 src="assets/icons-black/remove-black.svg"
                 alt="Remover conselho"
