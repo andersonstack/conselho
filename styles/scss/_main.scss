@@ -55,6 +55,19 @@
       justify-content: space-around;
       align-items: flex-end;
       width: 100%;
+
+      button {
+        @include aplicar_font($font-principal, 0.9rem, 400, #000000);
+        background-color: $cor-quatro;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $cor-um;
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+      }
     }
   }
 }
