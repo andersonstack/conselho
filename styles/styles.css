@@ -180,6 +180,14 @@ body {
   gap: 1.5rem;
   height: 25vh;
 }
+.main .cartao .bookmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+}
 .main .cartao .cartao__texto {
   color: #ddd696;
   text-align: center;

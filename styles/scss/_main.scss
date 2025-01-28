@@ -35,6 +35,15 @@
     gap: 1.5rem;
     height: 25vh;
 
+    .bookmark {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: 0.5rem;
+    }
+
     .cartao__texto {
       @extend .main__texto;
       color: $cor-um;
