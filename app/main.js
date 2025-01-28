@@ -1,5 +1,5 @@
-// const conselho = await fetch("https://api.adviceslip.com/advice");
-// const conselhoObjeto = await conselho.json();
-// console.log(conselhoObjeto);
 import { menuNav } from "./menu.js";
+import { conselhoAPI } from "./api.js";
+const api = await conselhoAPI();
+console.log(api);
 menuNav();
