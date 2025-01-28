@@ -1,0 +1,42 @@
+@use "./variaveis" as *;
+@use "./mixins" as *;
+
+.main__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .main__lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+
+    .main__lista-item {
+      @include aplicar_font($font-principal, 1rem, 400, $cor-seis);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+
+      // Garantir que ocupe toda a largura disponível
+      width: 100%;
+      box-sizing: border-box;
+
+      .main__lista-item-botao {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+
+        img {
+          max-width: 2rem;
+          height: auto;
+        }
+      }
+    }
+  }
+}
