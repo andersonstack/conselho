@@ -157,14 +157,14 @@ body {
   height: 100vh;
 }
 .main h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
+  font-family: "Cormorant Upright", serif;
+  font-size: 2rem;
   font-weight: 600;
   color: #000000;
   margin-top: 1rem;
   text-align: center;
 }
-.main .main__texto, .main .cartao .cartao__texto {
+.main .main__texto {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -183,7 +183,7 @@ body {
   border-radius: 0.5rem;
   padding: 1rem;
   max-height: 100vh;
-  width: 100%;
+  width: 90%;
   gap: 1.5rem;
   height: 25vh;
 }
@@ -196,7 +196,9 @@ body {
   margin: 0.5rem;
 }
 .main .cartao .cartao__texto {
-  font-size: 1.25rem;
+  font-family: "Cormorant Upright", serif;
+  font-size: 2rem;
+  font-weight: 400;
   color: #c3fed5;
   text-align: center;
 }
@@ -257,9 +259,9 @@ body {
   height: auto;
 }
 .popup .popup__texto {
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
+  font-family: "Cormorant Upright", serif;
+  font-size: 2rem;
+  font-weight: 700;
   color: #000000;
 }
 

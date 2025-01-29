@@ -10,7 +10,7 @@
   height: 100vh;
 
   h1 {
-    @include aplicar_font($font-principal, 1.5rem, 600, $cor-fonte);
+    @include aplicar_font($font-cormoro, 2rem, 600, $cor-fonte);
     margin-top: 1rem;
     text-align: center;
   }
@@ -32,7 +32,7 @@
     border-radius: 0.5rem;
     padding: 1rem;
     max-height: 100vh;
-    width: 100%;
+    width: 90%;
     gap: 1.5rem;
     height: 25vh;
 
@@ -46,9 +46,7 @@
     }
 
     .cartao__texto {
-      @extend .main__texto;
-      font-size: 1.25rem;
-      color: $cor-primaria;
+      @include aplicar_font($font-cormoro, 2rem, 400, $cor-primaria);
       text-align: center;
     }
 
@@ -112,6 +110,6 @@
   }
 
   .popup__texto {
-    @include aplicar_font($font-principal, 1rem, 400, $cor-fonte);
+    @include aplicar_font($font-cormoro, 2rem, 700, $cor-fonte);
   }
 }
