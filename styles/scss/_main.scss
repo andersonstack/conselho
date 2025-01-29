@@ -34,7 +34,7 @@
     max-height: 100vh;
     width: 90%;
     gap: 1.5rem;
-    height: 25vh;
+    height: auto;
 
     .bookmark {
       position: absolute;
@@ -87,9 +87,10 @@
   transform: translateY(-100%);
   background-color: #fff;
   width: 90%;
+  height: auto;
   top: 25vh;
   left: 0;
-  z-index: 2;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
