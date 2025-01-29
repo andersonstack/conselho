@@ -1,5 +1,10 @@
 export async function conselhoAPI() {
-  const conselho = await fetch("https://api.adviceslip.com/advice");
-  const conselhoObjeto = await conselho.json();
-  return conselhoObjeto;
+  try {
+    const conselho = await fetch("https://api.adviceslip.com/advice");
+    const conselhoObjeto = await conselho.json();
+    return conselhoObjeto;
+  } catch (error) {
+    console.error("Erro ao buscar conselho:", error);
+    return null; // Retorna null em caso de erro
+  }
 }
