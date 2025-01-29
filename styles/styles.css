@@ -266,6 +266,40 @@ body {
   color: #000000;
 }
 
+@media screen and (min-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr auto;
+    grid-template-areas: "h1 lista" "p lista" "cartao lista";
+    gap: 1rem;
+    justify-items: center;
+    align-items: start;
+  }
+  h1 {
+    grid-area: h1;
+    margin-top: 0;
+    justify-self: start;
+    margin: 0 1rem;
+  }
+  .main__texto {
+    grid-area: p;
+    margin-top: 0;
+    justify-self: start;
+    margin: 0 1rem;
+  }
+  .main__section {
+    grid-area: lista;
+  }
+  .main__section .main__lista-item {
+    display: flex;
+  }
+  .cartao {
+    grid-area: cartao;
+    justify-self: start;
+    margin: 0 1rem;
+  }
+}
 .main__section {
   display: flex;
   align-items: center;
