@@ -46,7 +46,7 @@
     }
 
     .cartao__texto {
-      @include aplicar_font($font-cormoro, 2rem, 400, $cor-primaria);
+      @include aplicar_font($font-cormoro, 2rem, 400, $cor-fonte-primaria);
       text-align: center;
     }
 
