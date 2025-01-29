@@ -41,4 +41,4 @@ function salvarConselho(texto) {
   });
 }
 
-export default salvarConselho;
+export const conselhoController = { salvarConselho };
