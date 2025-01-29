@@ -81,3 +81,36 @@
     }
   }
 }
+
+.popup {
+  visibility: hidden;
+  position: absolute;
+  transform: translateY(-100%);
+  background-color: #fff;
+  width: 90%;
+  top: 25vh;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 20px 10px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  z-index: 1000;
+
+  img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.5rem;
+    height: auto;
+  }
+
+  .popup__texto {
+    @include aplicar_font($font-principal, 1rem, 400, $cor-cinco);
+  }
+}

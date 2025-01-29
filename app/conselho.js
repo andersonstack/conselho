@@ -14,6 +14,45 @@ function removerConselho() {
   });
 }
 
+function verConselho() {
+  const conselhoLista = document.getElementById("main__lista");
+
+  conselhoLista.addEventListener("click", (evento) => {
+    evento.preventDefault();
+
+    const botaoVisualizar = evento.target.closest(".botao-visualizar");
+
+    if (botaoVisualizar) {
+      const texto = botaoVisualizar.closest("li").textContent;
+      const popup = document.getElementById("popup");
+
+      const paragrafoExistente = popup.querySelector("p");
+      if (paragrafoExistente) {
+        paragrafoExistente.remove();
+      }
+
+      const novoParagrafo = document.createElement("p");
+      novoParagrafo.textContent = texto;
+      novoParagrafo.classList.add("popup__texto");
+      popup.appendChild(novoParagrafo);
+
+      popup.style.visibility = "visible";
+      popup.style.transform = "translateY(0%)";
+
+      const main = document.querySelector("main");
+      main.style.opacity = "0.5";
+
+      const botaoFechar = popup.querySelector("img");
+      botaoFechar.addEventListener("click", () => {
+        popup.style.visibility = "hidden";
+        popup.style.transform = "translateY(-100%)";
+        const main = document.querySelector("main");
+        main.style.opacity = "1";
+      });
+    }
+  });
+}
+
 function salvarConselho(texto, id) {
   const botaoBookmark = document.getElementById("botao__bookmark");
   const conselhoLista = document.getElementById("main__lista");
@@ -45,6 +84,7 @@ function salvarConselho(texto, id) {
     conselhoLista.appendChild(novoConselho);
 
     removerConselho();
+    verConselho();
   } else {
     botaoBookmark.classList.remove("bookmark-salvo");
   }
