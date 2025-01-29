@@ -9,4 +9,8 @@ const mainConselho = document.getElementById("cartao__texto");
 mainConselho.textContent = textoAPI;
 
 menuNav();
-conselhoController.salvarConselho(textoAPI, id);
+
+const bookmark = document.getElementById("botao__bookmark");
+bookmark.addEventListener("click", () =>
+  conselhoController.salvarConselho(textoAPI, textoID)
+);
