@@ -10,13 +10,13 @@
   height: 100vh;
 
   h1 {
-    @include aplicar_font($font-principal, 2rem, 600, $cor-cinco);
+    @include aplicar_font($font-principal, 1.5rem, 600, $cor-fonte);
     margin-top: 1rem;
     text-align: center;
   }
 
   .main__texto {
-    @include aplicar_font($font-principal, 1rem, 400, $cor-cinco);
+    @include aplicar_font($font-principal, 1rem, 400, $cor-fonte);
     margin-top: 1rem;
     text-align: center;
   }
@@ -28,7 +28,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: $cor-cinco;
+    background-color: $bg-color;
     border-radius: 0.5rem;
     padding: 1rem;
     max-height: 100vh;
@@ -47,7 +47,8 @@
 
     .cartao__texto {
       @extend .main__texto;
-      color: $cor-um;
+      font-size: 1.25rem;
+      color: $cor-primaria;
       text-align: center;
     }
 
@@ -68,13 +69,13 @@
 
       button {
         @include aplicar_font($font-principal, 0.9rem, 400, #000000);
-        background-color: $cor-quatro;
+        background-color: $bg-color;
         border-radius: 0.5rem;
         padding: 1rem;
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: $cor-um;
+          background-color: $cor-primaria;
           box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
         }
       }
@@ -111,6 +112,6 @@
   }
 
   .popup__texto {
-    @include aplicar_font($font-principal, 1rem, 400, $cor-cinco);
+    @include aplicar_font($font-principal, 1rem, 400, $cor-fonte);
   }
 }

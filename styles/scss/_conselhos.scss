@@ -28,11 +28,11 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $cor-cinco;
+      background-color: $cor-primaria;
     }
 
     .main__lista-item {
-      @include aplicar_font($font-principal, 1rem, 400, $cor-seis);
+      @include aplicar_font($font-principal, 1rem, 400, $cor-fonte);
       display: flex;
       justify-content: space-between;
       align-items: center;
