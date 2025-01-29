@@ -1,3 +1,19 @@
+function removerConselho() {
+  const conselhoLista = document.getElementById("main__lista");
+
+  conselhoLista.addEventListener("click", (evento) => {
+    evento.preventDefault();
+
+    const botaoRemover = evento.target.closest(".botao-remover");
+    if (botaoRemover) {
+      const li = botaoRemover.closest("li");
+      if (li) {
+        li.remove();
+      }
+    }
+  });
+}
+
 function salvarConselho(texto, id) {
   const botaoBookmark = document.getElementById("botao__bookmark");
   const conselhoLista = document.getElementById("main__lista");
@@ -33,6 +49,8 @@ function salvarConselho(texto, id) {
             </button>
         </li>`;
       conselhoLista.appendChild(novoConselho);
+
+      removerConselho();
     } else {
       botaoBookmark.classList.remove("bookmark-salvo");
     }
