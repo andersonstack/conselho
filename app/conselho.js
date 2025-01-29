@@ -30,26 +30,20 @@ function salvarConselho(texto, id) {
   if (!isSaved) {
     botaoBookmark.classList.add("bookmark-salvo");
     const novoConselho = document.createElement("li");
+    novoConselho.classList.add("main__lista-item");
+    novoConselho.id = id;
+    novoConselho.dataset.listaItem = "";
     novoConselho.innerHTML = `
-      <li class="main__lista-item" id="${id}" data-lista-item>
-          ${texto}
-          <button
-            class="main__lista-item-botao botao-visualizar"
-            aria-label="Botão de visualizar conselho"
-          >
-            <img src="assets/icons-black/eye-black.svg" alt="Ver conselho" />
-          </button>
-          <button
-            class="main__lista-item-botao botao-remover"
-            aria-label="Botão de remover conselho"
-          >
-            <img
-              src="assets/icons-black/remove-black.svg"
-              alt="Remover conselho"
-            />
-          </button>
-      </li>`;
+  ${texto}
+  <button class="main__lista-item-botao botao-visualizar">
+    <img src="assets/icons-black/eye-black.svg" alt="Ver conselho" />
+  </button>
+  <button class="main__lista-item-botao botao-remover">
+    <img src="assets/icons-black/remove-black.svg" alt="Remover conselho" />
+  </button>
+`;
     conselhoLista.appendChild(novoConselho);
+
     removerConselho();
   } else {
     botaoBookmark.classList.remove("bookmark-salvo");
