@@ -1,4 +1,4 @@
-function salvarConselho(texto) {
+function salvarConselho(texto, id) {
   const botaoBookmark = document.getElementById("botao__bookmark");
   const conselhoLista = document.getElementById("main__lista");
   console.log(texto);
@@ -14,18 +14,16 @@ function salvarConselho(texto) {
       botaoBookmark.classList.add("bookmark-salvo");
       const novoConselho = document.createElement("li");
       novoConselho.innerHTML += `
-        <li class="main__lista-item" id="main__lista-item" data-lista-item>
+        <li class="main__lista-item" id="${id}" data-lista-item>
             ${texto}
             <button
-              class="main__lista-item-botao"
-              id="botao-ver"
+              class="main__lista-item-botao botao-visualizar"
               aria-label="Botão de visualizar conselho"
             >
               <img src="assets/icons-black/eye-black.svg" alt="Ver conselho" />
             </button>
             <button
-              class="main__lista-item-botao"
-              id="botao-remover"
+              class="main__lista-item-botao botao-remover"
               aria-label="Botão de remover conselho"
             >
               <img
