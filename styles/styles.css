@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -184,7 +185,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("../../assets/background.png") no-repeat center center/contain;
+  background: linear-gradient(135deg, #d1c6b1, #b58f62, #a47a46), url("../../assets/texture.jpg") repeat;
+  background-size: cover;
   border-radius: 0.5rem;
   padding: 1rem;
   max-height: 100vh;
@@ -204,7 +206,7 @@ body {
   font-family: "Cormorant Upright", serif;
   font-size: 1.5rem;
   font-weight: 400;
-  color: #806d59;
+  color: #efdcc9;
   max-width: 60%;
   max-height: 70%;
   overflow: auto;
@@ -270,7 +272,7 @@ body {
   h1 {
     grid-area: h1;
     margin-top: 0;
-    justify-self: start;
+    justify-self: center;
     margin: 0 1rem;
   }
   .main__texto {
@@ -281,6 +283,8 @@ body {
   }
   .main__section {
     grid-area: lista;
+    justify-self: center;
+    align-self: center;
   }
   .main__section .main__lista-item {
     display: flex;
@@ -289,12 +293,57 @@ body {
     grid-area: cartao;
     justify-self: start;
     margin: 0 1rem;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #d1c6b1, #b58f62, #a47a46), url("../../assets/texture.jpg") repeat; /* A imagem de textura sobreposta */
+    background-size: cover;
+    min-height: 60vh;
+    margin: 1rem;
+  }
+  .menu__lista {
+    display: flex;
+    position: relative;
+    background: none;
+    border: none;
+    box-shadow: none;
+    gap: 2rem; /* Ajuste para espaçamento entre os itens */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+  }
+  .menu__lista .menu__lista-item {
+    display: flex;
+    align-items: center; /* Centraliza os ícones e textos */
+    gap: 0.5rem; /* Espaço entre o ícone e o texto */
+  }
+  .menu__lista .menu__lista-item img {
+    max-width: 2.5rem;
+  }
+  .menu__lista .menu__lista-item p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9;
+    font-weight: 400;
+    color: #000000;
+    /* Certifique-se de que a cor do texto seja visível */
+    display: block; /* Garante que o texto será exibido */
+    color: #000000; /* Defina a cor do texto, caso a variável não esteja funcionando */
+    font-size: 1rem; /* Garantir tamanho adequado */
+    text-align: center; /* Alinha o texto centralizado em relação ao ícone */
+    margin-top: 0.5rem; /* Espaçamento entre o ícone e o texto */
+  }
+  .menu__botao {
+    display: none; /* Esconde o botão em telas maiores */
+  }
+  nav {
+    display: flex;
+    justify-content: space-between; /* Alinha os itens de forma espaçada */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    width: 100%; /* Garante que a navegação ocupe toda a largura */
   }
 }
 .main__section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 90%;
 }
 .main__section .main__lista {
   display: flex;
