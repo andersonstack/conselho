@@ -202,6 +202,16 @@ body {
   color: #eafff1;
   text-align: center;
 }
+.main .cartao .line {
+  position: relative;
+  width: 0px;
+  margin: auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .main .cartao img {
   max-width: 2.5rem;
   margin-top: 1rem;

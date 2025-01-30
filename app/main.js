@@ -11,6 +11,18 @@ if (api) {
   const mainConselho = document.getElementById("cartao__texto");
   mainConselho.textContent = textoAPI;
 
+  var typewriter = new Typewriter(mainConselho, {
+    loop: true,
+    delay: 75,
+  });
+
+  typewriter
+    .typeString(textoAPI)
+    .pauseFor(2500)
+    .deleteAll()
+    .typeString(textoAPI)
+    .start();
+
   menuNav();
 
   const bookmark = document.getElementById("botao__bookmark");
