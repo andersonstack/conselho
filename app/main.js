@@ -12,16 +12,11 @@ if (api) {
   mainConselho.textContent = textoAPI;
 
   var typewriter = new Typewriter(mainConselho, {
-    loop: true,
+    loop: false,
     delay: 75,
   });
 
-  typewriter
-    .typeString(textoAPI)
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString(textoAPI)
-    .start();
+  typewriter.typeString(textoAPI).start();
 
   menuNav();
 

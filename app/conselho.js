@@ -62,9 +62,7 @@ function salvarConselho(texto, id) {
   const isSaved = botaoBookmark.classList.contains("bookmark-salvo");
 
   // Alterna a imagem do botão de bookmark
-  img.src = isSaved
-    ? "assets/icons-black/bookmark-black.svg"
-    : "assets/bookmark-save.svg";
+  img.src = isSaved ? "assets/selo.png" : "assets/selo-salvo.png";
 
   if (!isSaved) {
     botaoBookmark.classList.add("bookmark-salvo");

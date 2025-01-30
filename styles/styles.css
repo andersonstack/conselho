@@ -79,7 +79,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, #c3fed5, #dffeea, #faffff);
+  background: linear-gradient(180deg, #efdcc9, #806d59);
 }
 
 .menu {
@@ -100,6 +100,11 @@ body {
   display: none;
 }
 
+.menu__botao-img {
+  width: 1.5rem;
+  height: auto;
+}
+
 .menu__botao {
   width: 2.5rem;
   height: 2.5rem;
@@ -118,7 +123,7 @@ body {
   border-radius: 0 0.5rem 0.5rem 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 1;
-  background-color: #91bc9e;
+  background-color: #bca792;
 }
 .menu__lista .menu__lista-item {
   margin-top: 0;
@@ -179,66 +184,42 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #91bc9e;
+  background: url("../../assets/background.png") no-repeat center center/contain;
   border-radius: 0.5rem;
   padding: 1rem;
   max-height: 100vh;
   width: 90%;
   gap: 1.5rem;
-  height: auto;
+  height: 25%;
 }
 .main .cartao .bookmark {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 1.5rem;
-  height: 1.5rem;
+  left: 10%;
+  top: 1%;
+  width: 3rem;
+  height: 3rem;
   margin: 0.5rem;
 }
 .main .cartao .cartao__texto {
   font-family: "Cormorant Upright", serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  color: #eafff1;
+  color: #806d59;
+  max-width: 60%;
+  max-height: 70%;
+  overflow: auto;
+  text-overflow: ellipsis;
   text-align: center;
 }
-.main .cartao .line {
-  position: relative;
-  width: 0px;
-  margin: auto;
-  border-right: 2px solid rgba(255, 255, 255, 0.75);
-  font-size: 180%;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
+.main .cartao .cartao__texto::-webkit-scrollbar {
+  width: 1px;
+  opacity: 0.5;
 }
-.main .cartao img {
-  max-width: 2.5rem;
-  margin-top: 1rem;
-  position: absolute;
-  z-index: 1;
-  top: -2rem;
+.main .cartao .cartao__texto::-webkit-scrollbar-track {
+  background-color: transparent;
 }
-.main .cartao .buttons {
-  margin: 1rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  width: 100%;
-}
-.main .cartao .buttons button {
-  font-family: "Poppins", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #000000;
-  background-color: #91bc9e;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  transition: background-color 0.3s ease;
-}
-.main .cartao .buttons button:hover {
-  background-color: #c3fed5;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+.main .cartao .cartao__texto::-webkit-scrollbar-thumb {
+  background-color: #806d59;
 }
 
 .popup {
@@ -335,7 +316,7 @@ body {
   background-color: transparent;
 }
 .main__section .main__lista::-webkit-scrollbar-thumb {
-  background-color: #c3fed5;
+  background-color: #efdcc9;
 }
 .main__section .main__lista .main__lista-item {
   font-family: "Poppins", sans-serif;

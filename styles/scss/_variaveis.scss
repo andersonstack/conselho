@@ -1,21 +1,13 @@
 $font-principal: "Poppins", sans-serif;
 $font-secundaria: "Raleway", sans-serif;
 $font-cormoro: "Cormorant Upright", serif;
-$cor-primaria: #c3fed5;
-$cor-secundaria: #dffeea;
+$cor-primaria: #efdcc9;
+$cor-secundaria: #806d59;
 $cor_terciaria: #faffff;
-$cor-fonte-primaria: #eafff1;
+$cor-fonte-primaria: #806d59;
 
-$bg-color: #91bc9e;
+$bg-color: #bca792;
 
 $cor-fonte: #000000;
-$cor-tres: #e6df9d;
-$cor-quatro: #999468;
-$cor-seis: #55523a;
 
-$gradiente_fundo: linear-gradient(
-  180deg,
-  $cor-primaria,
-  $cor-secundaria,
-  $cor_terciaria
-);
+$gradiente_fundo: linear-gradient(180deg, $cor-primaria, $cor-secundaria);
