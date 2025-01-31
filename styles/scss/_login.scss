@@ -1,0 +1,97 @@
+@use "./variaveis" as *;
+@use "./mixins" as *;
+
+.body__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  .div__login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $cor-terciaria;
+    justify-content: space-around;
+    padding: 1rem;
+    width: 50%;
+    height: 50%;
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 0.7rem rgba(0, 0, 0, 0.2);
+  }
+
+  .login__titulo {
+    font-size: 3rem;
+    @include aplicar_font($font-cormoro, 3rem, 500, $cor-fonte);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+  }
+
+  input {
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    border: 0.5px solid $cor-primaria;
+
+    &:hover {
+      border: 0.5px solid $cor-primaria;
+      border-radius: 0.5rem;
+    }
+
+    &:focus {
+      outline: none;
+      border: 0.5px solid $cor-primaria;
+      border-radius: 0.5rem;
+    }
+
+    &::-webkit-input-placeholder {
+      @include aplicar_font($font-cormoro, 1rem, 500, $cor-fonte);
+      opacity: 0.5;
+    }
+
+    &::placeholder {
+      @include aplicar_font($font-cormoro, 1rem, 500, $cor-fonte);
+      opacity: 0.5;
+    }
+  }
+
+  .button {
+    @include aplicar_font($font-cormoro, 1rem, 500, $cor-fonte);
+    background-color: $cor-primaria;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $bg-color;
+      border-radius: 0.5rem;
+    }
+  }
+
+  .button__login {
+    width: 80%;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0.5rem;
+
+    .button__forget {
+      @include aplicar_font($font-cormoro, 1rem, 500, $cor-fonte);
+      opacity: 0.5;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

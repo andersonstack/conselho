@@ -394,4 +394,100 @@ body {
 .main__section .main__lista .main__lista-item .main__lista-item-botao img {
   max-width: 2rem;
   height: auto;
+}
+
+.body__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.body__login .div__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #faffff;
+  justify-content: space-around;
+  padding: 1rem;
+  width: 50%;
+  height: 50%;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 0.7rem rgba(0, 0, 0, 0.2);
+}
+.body__login .login__titulo {
+  font-size: 3rem;
+  font-family: "Cormorant Upright", serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #000000;
+}
+.body__login form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+}
+.body__login input {
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border: 0.5px solid #efdcc9;
+}
+.body__login input:hover {
+  border: 0.5px solid #efdcc9;
+  border-radius: 0.5rem;
+}
+.body__login input:focus {
+  outline: none;
+  border: 0.5px solid #efdcc9;
+  border-radius: 0.5rem;
+}
+.body__login input::-moz-placeholder {
+  font-family: "Cormorant Upright", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  opacity: 0.5;
+}
+.body__login input::placeholder {
+  font-family: "Cormorant Upright", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  opacity: 0.5;
+}
+.body__login .button {
+  font-family: "Cormorant Upright", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  background-color: #efdcc9;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.body__login .button:hover {
+  background-color: #bca792;
+  border-radius: 0.5rem;
+}
+.body__login .button__login {
+  width: 80%;
+}
+.body__login .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0.5rem;
+}
+.body__login .buttons .button__forget {
+  font-family: "Cormorant Upright", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.body__login .buttons .button__forget:hover {
+  opacity: 1;
 }/*# sourceMappingURL=styles.css.map */
