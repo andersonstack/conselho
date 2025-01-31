@@ -440,6 +440,20 @@ li {
   transform: translateY(0); /* Retorna ao estado normal */
 }
 
+.main__lista-item.remover {
+  text-decoration: line-through;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transform: translateY(-10px);
+  overflow: hidden;
+}
+
+.main__lista-item.remover.visivel {
+  opacity: 0; /* Fica invisível */
+  transform: translateX(5px); /* Desliza para baixo */
+  overflow: hidden;
+}
+
 .main__lista-item-botao {
   width: 2.5rem;
   height: 2.5rem;

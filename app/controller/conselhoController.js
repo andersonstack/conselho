@@ -1,16 +1,18 @@
 function removerConselho() {
-  const conselhoLista = document.getElementById("main__lista");
+  const botoesRemover = document.querySelectorAll(
+    ".main__lista-item-botao.botao-remover"
+  );
 
-  conselhoLista.addEventListener("click", (evento) => {
-    evento.preventDefault();
+  botoesRemover.forEach((botao) => {
+    botao.addEventListener("click", function () {
+      const item = this.closest(".main__lista-item");
 
-    const botaoRemover = evento.target.closest(".botao-remover");
-    if (botaoRemover) {
-      const li = botaoRemover.closest("li");
-      if (li) {
-        li.remove();
-      }
-    }
+      item.classList.add("remover");
+
+      setTimeout(() => {
+        item.remove();
+      }, 1000);
+    });
   });
 }
 
