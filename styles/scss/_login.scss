@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  width: 100vw; /* Adicionando largura 100% da tela para garantir que o layout ocupe toda a tela */
 
   .div__login {
     display: flex;
@@ -15,10 +16,11 @@
     background-color: $cor-terciaria;
     justify-content: space-around;
     padding: 1rem;
-    width: 50%;
+    width: 80%; /* A largura padrão será 80% */
     height: 50%;
     border-radius: 1rem;
     box-shadow: 1rem 1rem 0.7rem rgba(0, 0, 0, 0.2);
+    transition: width 0.3s ease-in-out; /* Transição suave para a largura */
   }
 
   .login__titulo {
@@ -93,5 +95,19 @@
         opacity: 1;
       }
     }
+  }
+}
+
+// Para telas maiores que 500px, a largura é 50%
+@media screen and (min-width: 500px) {
+  .div__login {
+    width: 50%;
+  }
+}
+
+// Para telas menores que 500px, a largura continua 100%
+@media screen and (max-width: 499px) {
+  .div__login {
+    width: 100%;
   }
 }

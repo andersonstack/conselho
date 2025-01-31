@@ -402,6 +402,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  width: 100vw; /* Adicionando largura 100% da tela para garantir que o layout ocupe toda a tela */
 }
 .body__login .div__login {
   display: flex;
@@ -410,10 +411,11 @@ body {
   background-color: #faffff;
   justify-content: space-around;
   padding: 1rem;
-  width: 50%;
+  width: 80%; /* A largura padrão será 80% */
   height: 50%;
   border-radius: 1rem;
   box-shadow: 1rem 1rem 0.7rem rgba(0, 0, 0, 0.2);
+  transition: width 0.3s ease-in-out; /* Transição suave para a largura */
 }
 .body__login .login__titulo {
   font-size: 3rem;
@@ -490,4 +492,15 @@ body {
 }
 .body__login .buttons .button__forget:hover {
   opacity: 1;
+}
+
+@media screen and (min-width: 500px) {
+  .div__login {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 499px) {
+  .div__login {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */
