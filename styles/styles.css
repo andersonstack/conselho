@@ -281,6 +281,9 @@ body {
     justify-self: start;
     margin: 0 1rem;
   }
+  .bookmark {
+    cursor: pointer;
+  }
   .main__section {
     grid-area: lista;
     justify-self: center;
