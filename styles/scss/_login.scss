@@ -1,6 +1,19 @@
 @use "./variaveis" as *;
 @use "./mixins" as *;
 
+.button__back {
+  list-style: none;
+  text-decoration: none;
+  @include aplicar_font($font-cormoro, 1rem, 500, $cor-fonte);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+
+  &:hover {
+    text-decoration: underline;
+    opacity: 1;
+  }
+}
+
 .body__login {
   display: flex;
   flex-direction: column;

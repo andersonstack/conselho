@@ -3,18 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conselhos - Login</title>
+    <title>Conselhos - Cadastro</title>
     <link rel="stylesheet" href="../styles/styles.css" />
     <script
       type="module"
-      src="../app/controller/loginController.js"
+      src="../app/controller/cadastroController.js"
       defer
     ></script>
   </head>
   <body class="body__login">
     <div class="div__login">
-      <h1 class="login__titulo">Login</h1>
+      <h1 class="login__titulo">Cadastre-se</h1>
       <form>
+        <input
+          id="nome"
+          type="texto"
+          class="input__form"
+          required
+          placeholder="Nome"
+        />
         <input
           id="email"
           type="email"
@@ -30,11 +37,10 @@
           placeholder="Senha"
         />
       </form>
-      <button class="button button__login">Entrar</button>
-      <div class="buttons">
-        <button class="button__forget">Esqueceu a senha ?</button>
-        <button class="button button__sigup">Cadastrar-se</button>
-      </div>
+      <button class="button button__sigup" id="button__post">
+        Cadastrar-se
+      </button>
+      <a href="login.html" class="button__back">Voltar</a>
     </div>
   </body>
 </html>

@@ -8,15 +8,41 @@
   justify-content: space-between;
   gap: 1rem;
 
-  .menu__botao-inicio {
+  .menu__botao-usuario {
     margin-top: 0;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     max-width: 2.5rem;
+    cursor: pointer;
 
     p {
       display: none;
+    }
+  }
+
+  .logout {
+    @include aplicar_font($font-principal, 1rem, 400, $cor-fonte);
+    visibility: hidden;
+    display: flex;
+    position: absolute;
+    // top: 80%;
+    top: 100%;
+    // left: 4%;
+    right: 10%;
+    background-size: contain;
+    gap: 0.5rem;
+    background-color: $bg-color;
+    padding: 1rem;
+    // border-radius: 0 1rem 1rem 1rem;
+    border-radius: 1rem 0 1rem 1rem;
+    z-index: 1;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+
+    img {
+      width: 1.2rem;
+      height: auto;
     }
   }
 }
