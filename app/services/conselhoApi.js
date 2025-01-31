@@ -1,4 +1,4 @@
-export async function conselhoAPI() {
+async function conselhoAPI() {
   try {
     const conselho = await fetch("https://api.adviceslip.com/advice");
     const conselhoObjeto = await conselho.json();
@@ -8,3 +8,7 @@ export async function conselhoAPI() {
     return null; // Retorna null em caso de erro
   }
 }
+
+export const conselhoService = {
+  conselhoAPI,
+};

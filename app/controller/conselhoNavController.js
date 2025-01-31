@@ -1,4 +1,4 @@
-export function menuNav() {
+function menuNav() {
   const menu = document.querySelector(".menu__botao");
   const menuLista = document.querySelector(".menu__lista");
   const menuImagem = menu.querySelector("img");
@@ -19,3 +19,7 @@ export function menuNav() {
     }
   });
 }
+
+export const conselhoNavController = {
+  menuNav,
+};

@@ -1,8 +1,8 @@
-import { menuNav } from "./menu.js";
-import { conselhoAPI } from "./api.js";
-import { conselhoController } from "./conselho.js";
+import { conselhoNavController } from "./controller/conselhoNavController.js";
+import { conselhoController } from "./controller/conselhoController.js";
+import { conselhoService } from "./services/conselhoApi.js";
 
-const api = await conselhoAPI();
+const api = await conselhoService.conselhoAPI();
 
 if (api) {
   const textoAPI = api.slip.advice;
@@ -18,7 +18,7 @@ if (api) {
 
   typewriter.typeString(textoAPI).start();
 
-  menuNav();
+  conselhoNavController.menuNav();
 
   const bookmark = document.getElementById("botao__bookmark");
 
