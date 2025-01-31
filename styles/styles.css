@@ -547,7 +547,10 @@ form input::placeholder {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
+  gap: 1rem;
   margin: 0.5rem;
+  transition: all 1s ease-in-out;
 }
 .buttons .button__forget {
   font-family: "Cormorant Upright", serif;
@@ -560,4 +563,11 @@ form input::placeholder {
 }
 .buttons .button__forget:hover {
   opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

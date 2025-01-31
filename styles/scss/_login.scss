@@ -96,7 +96,10 @@ form {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
+  gap: 1rem;
   margin: 0.5rem;
+  transition: all 1s ease-in-out;
 
   .button__forget {
     @include aplicar_font($font-cormoro, 1rem, 500, $cor-fonte);
@@ -107,5 +110,12 @@ form {
     &:hover {
       opacity: 1;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .buttons {
+    flex-direction: row;
+    gap: 2rem;
   }
 }
