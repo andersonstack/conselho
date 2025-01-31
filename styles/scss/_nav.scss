@@ -7,40 +7,40 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+}
 
-  .menu__botao-usuario {
-    margin-top: 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    max-width: 2.5rem;
-    cursor: pointer;
+.menu__botao-usuario {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 2.5rem;
+  cursor: pointer;
 
-    p {
-      display: none;
-    }
+  p {
+    display: none;
   }
+}
 
-  .logout {
-    @include aplicar_font($font-principal, 1rem, 400, $cor-fonte);
-    visibility: hidden;
-    display: flex;
-    position: absolute;
-    top: 100%;
-    right: 10%;
-    background-size: contain;
-    gap: 0.5rem;
-    background-color: $bg-color;
-    padding: 1rem;
-    border-radius: 1rem 0 1rem 1rem;
-    z-index: 1;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    cursor: pointer;
+.logout {
+  @include aplicar_font($font-principal, 1rem, 400, $cor-fonte);
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  right: 10%;
+  background-size: contain;
+  gap: 0.5rem;
+  background-color: $bg-color;
+  padding: 1rem;
+  border-radius: 1rem 0 1rem 1rem;
+  z-index: 1;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
 
-    img {
-      width: 1.2rem;
-      height: auto;
-    }
+  img {
+    width: 1.2rem;
+    height: auto;
   }
 }
 
@@ -68,32 +68,79 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 1;
   background-color: $bg-color;
+}
 
-  .menu__lista-item {
-    margin-top: 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.menu__lista-item {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
-    img {
-      max-width: 2.5rem;
-      margin-top: 1rem;
-    }
-
-    p {
-      @include aplicar_font($font-principal, 0.9, 400, $cor-fonte);
-      display: none;
-    }
+  img {
+    max-width: 2.5rem;
+    margin-top: 1rem;
   }
 
-  li {
-    gap: 0.5rem;
-    text-align: center;
+  p {
+    @include aplicar_font($font-principal, 0.9, 400, $cor-fonte);
+    display: none;
   }
+}
+
+li {
+  gap: 0.5rem;
+  text-align: center;
 }
 
 .menu__lista.ativo {
   display: block;
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+  .menu__lista {
+    display: flex;
+    position: relative;
+    background: none;
+    border: none;
+    box-shadow: none;
+    gap: 2rem; /* Ajuste para espaçamento entre os itens */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+  }
+
+  .menu__lista-item {
+    display: flex;
+    align-items: center; /* Centraliza os ícones e textos */
+    gap: 0.5rem; /* Espaço entre o ícone e o texto */
+
+    img {
+      max-width: 2.5rem;
+    }
+
+    p {
+      @include aplicar_font(
+        $font-principal,
+        0.9,
+        400,
+        #000000
+      ); /* Certifique-se de que a cor do texto seja visível */
+      display: block; /* Garante que o texto será exibido */
+      color: #000000; /* Defina a cor do texto, caso a variável não esteja funcionando */
+      font-size: 1rem; /* Garantir tamanho adequado */
+      text-align: center; /* Alinha o texto centralizado em relação ao ícone */
+      margin-top: 0.5rem; /* Espaçamento entre o ícone e o texto */
+    }
+  }
+
+  .menu__botao {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between; /* Alinha os itens de forma espaçada */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    width: 100%; /* Garante que a navegação ocupe toda a largura */
+  }
 }

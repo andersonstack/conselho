@@ -90,7 +90,8 @@ body {
   justify-content: space-between;
   gap: 1rem;
 }
-.menu .menu__botao-usuario {
+
+.menu__botao-usuario {
   margin-top: 0;
   display: flex;
   align-items: center;
@@ -98,10 +99,11 @@ body {
   max-width: 2.5rem;
   cursor: pointer;
 }
-.menu .menu__botao-usuario p {
+.menu__botao-usuario p {
   display: none;
 }
-.menu .logout {
+
+.logout {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -120,7 +122,7 @@ body {
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
 }
-.menu .logout img {
+.logout img {
   width: 1.2rem;
   height: auto;
 }
@@ -150,24 +152,26 @@ body {
   z-index: 1;
   background-color: #bca792;
 }
-.menu__lista .menu__lista-item {
+
+.menu__lista-item {
   margin-top: 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.menu__lista .menu__lista-item img {
+.menu__lista-item img {
   max-width: 2.5rem;
   margin-top: 1rem;
 }
-.menu__lista .menu__lista-item p {
+.menu__lista-item p {
   font-family: "Poppins", sans-serif;
   font-size: 0.9;
   font-weight: 400;
   color: #000000;
   display: none;
 }
-.menu__lista li {
+
+li {
   gap: 0.5rem;
   text-align: center;
 }
@@ -178,6 +182,46 @@ body {
   transform: translateY(0);
 }
 
+@media screen and (min-width: 768px) {
+  .menu__lista {
+    display: flex;
+    position: relative;
+    background: none;
+    border: none;
+    box-shadow: none;
+    gap: 2rem; /* Ajuste para espaçamento entre os itens */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+  }
+  .menu__lista-item {
+    display: flex;
+    align-items: center; /* Centraliza os ícones e textos */
+    gap: 0.5rem; /* Espaço entre o ícone e o texto */
+  }
+  .menu__lista-item img {
+    max-width: 2.5rem;
+  }
+  .menu__lista-item p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9;
+    font-weight: 400;
+    color: #000000;
+    /* Certifique-se de que a cor do texto seja visível */
+    display: block; /* Garante que o texto será exibido */
+    color: #000000; /* Defina a cor do texto, caso a variável não esteja funcionando */
+    font-size: 1rem; /* Garantir tamanho adequado */
+    text-align: center; /* Alinha o texto centralizado em relação ao ícone */
+    margin-top: 0.5rem; /* Espaçamento entre o ícone e o texto */
+  }
+  .menu__botao {
+    display: none;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between; /* Alinha os itens de forma espaçada */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    width: 100%; /* Garante que a navegação ocupe toda a largura */
+  }
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -187,14 +231,13 @@ body {
   height: 100vh;
 }
 .main h1 {
-  font-family: "Cormorant Upright", serif;
-  font-size: 2rem;
-  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: #000000;
-  margin-top: 1rem;
-  text-align: center;
 }
-.main .main__texto {
+
+.main__texto {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -202,7 +245,8 @@ body {
   margin-top: 1rem;
   text-align: center;
 }
-.main .cartao {
+
+.cartao {
   margin-top: 1rem;
   position: relative;
   display: flex;
@@ -218,7 +262,8 @@ body {
   gap: 1.5rem;
   height: 25%;
 }
-.main .cartao .bookmark {
+
+.bookmark {
   position: absolute;
   left: 10%;
   top: 1%;
@@ -226,7 +271,8 @@ body {
   height: 3rem;
   margin: 0.5rem;
 }
-.main .cartao .cartao__texto {
+
+.cartao__texto {
   font-family: "Cormorant Upright", serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -237,14 +283,17 @@ body {
   text-overflow: ellipsis;
   text-align: center;
 }
-.main .cartao .cartao__texto::-webkit-scrollbar {
+
+.cartao__texto::-webkit-scrollbar {
   width: 1px;
   opacity: 0.5;
 }
-.main .cartao .cartao__texto::-webkit-scrollbar-track {
+
+.cartao__texto::-webkit-scrollbar-track {
   background-color: transparent;
 }
-.main .cartao .cartao__texto::-webkit-scrollbar-thumb {
+
+.cartao__texto::-webkit-scrollbar-thumb {
   background-color: #806d59;
 }
 
@@ -269,6 +318,7 @@ body {
   margin: 1rem;
   z-index: 1000;
 }
+
 .popup img {
   position: absolute;
   right: 0;
@@ -276,7 +326,8 @@ body {
   width: 1.5rem;
   height: auto;
 }
-.popup .popup__texto {
+
+.popup__texto {
   font-family: "Cormorant Upright", serif;
   font-size: 2rem;
   font-weight: 700;
@@ -293,7 +344,7 @@ body {
     justify-items: center;
     align-items: start;
   }
-  h1 {
+  .main h1 {
     grid-area: h1;
     margin-top: 0;
     justify-self: center;
@@ -313,57 +364,16 @@ body {
     justify-self: center;
     align-self: center;
   }
-  .main__section .main__lista-item {
-    display: flex;
-  }
   .cartao {
     grid-area: cartao;
     justify-self: start;
     margin: 0 1rem;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #d1c6b1, #b58f62, #a47a46), url("../../assets/texture.jpg") repeat; /* A imagem de textura sobreposta */
+    height: 80%;
+    background: linear-gradient(135deg, #d1c6b1, #b58f62, #a47a46), url("../../assets/texture.jpg") repeat;
     background-size: cover;
     min-height: 60vh;
     margin: 1rem;
-  }
-  .menu__lista {
-    display: flex;
-    position: relative;
-    background: none;
-    border: none;
-    box-shadow: none;
-    gap: 2rem; /* Ajuste para espaçamento entre os itens */
-    justify-content: flex-start; /* Alinha os itens à esquerda */
-  }
-  .menu__lista .menu__lista-item {
-    display: flex;
-    align-items: center; /* Centraliza os ícones e textos */
-    gap: 0.5rem; /* Espaço entre o ícone e o texto */
-  }
-  .menu__lista .menu__lista-item img {
-    max-width: 2.5rem;
-  }
-  .menu__lista .menu__lista-item p {
-    font-family: "Poppins", sans-serif;
-    font-size: 0.9;
-    font-weight: 400;
-    color: #000000;
-    /* Certifique-se de que a cor do texto seja visível */
-    display: block; /* Garante que o texto será exibido */
-    color: #000000; /* Defina a cor do texto, caso a variável não esteja funcionando */
-    font-size: 1rem; /* Garantir tamanho adequado */
-    text-align: center; /* Alinha o texto centralizado em relação ao ícone */
-    margin-top: 0.5rem; /* Espaçamento entre o ícone e o texto */
-  }
-  .menu__botao {
-    display: none; /* Esconde o botão em telas maiores */
-  }
-  nav {
-    display: flex;
-    justify-content: space-between; /* Alinha os itens de forma espaçada */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    width: 100%; /* Garante que a navegação ocupe toda a largura */
   }
 }
 .main__section {
@@ -372,7 +382,8 @@ body {
   justify-content: space-between;
   width: 90%;
 }
-.main__section .main__lista {
+
+.main__lista {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -385,16 +396,17 @@ body {
   padding: 0;
   margin: 0;
 }
-.main__section .main__lista::-webkit-scrollbar {
+.main__lista::-webkit-scrollbar {
   width: 5px;
 }
-.main__section .main__lista::-webkit-scrollbar-track {
+.main__lista::-webkit-scrollbar-track {
   background-color: transparent;
 }
-.main__section .main__lista::-webkit-scrollbar-thumb {
+.main__lista::-webkit-scrollbar-thumb {
   background-color: #efdcc9;
 }
-.main__section .main__lista .main__lista-item {
+
+.main__lista-item {
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -409,13 +421,14 @@ body {
   box-sizing: border-box;
   overflow: visible;
 }
-.main__section .main__lista .main__lista-item .main__lista-item-botao {
+
+.main__lista-item-botao {
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
   align-items: center;
 }
-.main__section .main__lista .main__lista-item .main__lista-item-botao img {
+.main__lista-item-botao img {
   max-width: 2rem;
   height: auto;
 }
@@ -443,7 +456,8 @@ body {
   gap: 2rem;
   width: 100vw; /* Adicionando largura 100% da tela para garantir que o layout ocupe toda a tela */
 }
-.body__login .div__login {
+
+.div__login {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -456,48 +470,51 @@ body {
   box-shadow: 1rem 1rem 0.7rem rgba(0, 0, 0, 0.2);
   transition: width 0.3s ease-in-out; /* Transição suave para a largura */
 }
-.body__login .login__titulo {
+
+.login__titulo {
   font-size: 3rem;
   font-family: "Cormorant Upright", serif;
   font-size: 3rem;
   font-weight: 500;
   color: #000000;
 }
-.body__login form {
+
+form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 80%;
 }
-.body__login input {
+form input {
   padding: 0.5rem;
   transition: all 0.3s ease;
   border: 0.5px solid #efdcc9;
 }
-.body__login input:hover {
+form input:hover {
   border: 0.5px solid #efdcc9;
   border-radius: 0.5rem;
 }
-.body__login input:focus {
+form input:focus {
   outline: none;
   border: 0.5px solid #efdcc9;
   border-radius: 0.5rem;
 }
-.body__login input::-moz-placeholder {
+form input::-moz-placeholder {
   font-family: "Cormorant Upright", serif;
   font-size: 1rem;
   font-weight: 500;
   color: #000000;
   opacity: 0.5;
 }
-.body__login input::placeholder {
+form input::placeholder {
   font-family: "Cormorant Upright", serif;
   font-size: 1rem;
   font-weight: 500;
   color: #000000;
   opacity: 0.5;
 }
-.body__login .button {
+
+.button {
   font-family: "Cormorant Upright", serif;
   font-size: 1rem;
   font-weight: 500;
@@ -507,20 +524,22 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.body__login .button:hover {
+.button:hover {
   background-color: #bca792;
   border-radius: 0.5rem;
 }
-.body__login .button__login {
+
+.button__login {
   width: 80%;
 }
-.body__login .buttons {
+
+.buttons {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   margin: 0.5rem;
 }
-.body__login .buttons .button__forget {
+.buttons .button__forget {
   font-family: "Cormorant Upright", serif;
   font-size: 1rem;
   font-weight: 500;
@@ -529,6 +548,6 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.body__login .buttons .button__forget:hover {
+.buttons .button__forget:hover {
   opacity: 1;
 }/*# sourceMappingURL=styles.css.map */
