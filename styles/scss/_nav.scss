@@ -26,16 +26,17 @@
   @include aplicar_font($font-principal, 1rem, 400, $cor-fonte);
   visibility: hidden;
   display: flex;
+  justify-content: space-between;
   position: absolute;
   top: 100%;
-  right: 10%;
+  right: 4%;
+  left: calc(82% - 3rem);
   background-size: contain;
   gap: 0.5rem;
   background-color: $bg-color;
   padding: 1rem;
   border-radius: 1rem 0 1rem 1rem;
   z-index: 1;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
 
   img {
@@ -142,5 +143,15 @@ li {
     justify-content: space-between; /* Alinha os itens de forma espaçada */
     align-items: center; /* Alinha os itens verticalmente ao centro */
     width: 100%; /* Garante que a navegação ocupe toda a largura */
+  }
+
+  .logout {
+    border-radius: 0 1rem 1rem 1rem;
+    position: absolute;
+    right: 82%;
+    top: 85%;
+    left: 4%;
+    display: flex;
+    justify-content: space-between;
   }
 }
