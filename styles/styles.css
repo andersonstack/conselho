@@ -109,13 +109,13 @@ body {
   visibility: hidden;
   display: flex;
   position: absolute;
-  top: 80%;
-  left: 4%;
+  top: 100%;
+  right: 10%;
   background-size: contain;
   gap: 0.5rem;
   background-color: #bca792;
   padding: 1rem;
-  border-radius: 0 1rem 1rem 1rem;
+  border-radius: 1rem 0 1rem 1rem;
   z-index: 1;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
@@ -531,15 +531,4 @@ body {
 }
 .body__login .buttons .button__forget:hover {
   opacity: 1;
-}
-
-@media screen and (min-width: 500px) {
-  .div__login {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 499px) {
-  .div__login {
-    width: 100%;
-  }
 }/*# sourceMappingURL=styles.css.map */

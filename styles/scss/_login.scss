@@ -110,17 +110,3 @@
     }
   }
 }
-
-// Para telas maiores que 500px, a largura é 50%
-@media screen and (min-width: 500px) {
-  .div__login {
-    width: 50%;
-  }
-}
-
-// Para telas menores que 500px, a largura continua 100%
-@media screen and (max-width: 499px) {
-  .div__login {
-    width: 100%;
-  }
-}
