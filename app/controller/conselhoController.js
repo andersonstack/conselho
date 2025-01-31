@@ -80,6 +80,9 @@ function salvarConselho(texto, id) {
   </button>
 `;
     conselhoLista.appendChild(novoConselho);
+    setTimeout(() => {
+      novoConselho.classList.add("visivel");
+    }, 10);
 
     removerConselho();
     verConselho();
