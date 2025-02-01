@@ -3,7 +3,8 @@ import { api } from "../services/backend.js";
 const botaoLogin = document.querySelector(".button__login");
 const paragrafoError = document.querySelector(".aviso__login");
 
-botaoLogin.addEventListener("click", () => {
+botaoLogin.addEventListener("click", (event) => {
+  event.preventDefault();
   const username = document.querySelector("#nome_usuario").value;
   const senha = document.querySelector("#senha").value;
 

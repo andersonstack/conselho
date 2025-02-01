@@ -17,7 +17,8 @@ senha.addEventListener("input", () => {
   }
 });
 
-botaoPOST.addEventListener("click", async () => {
+botaoPOST.addEventListener("click", async (event) => {
+  event.preventDefault();
   const senhaValue = senha.value;
   const regex = /^[a-zA-Z]+$/;
 
@@ -35,11 +36,12 @@ botaoPOST.addEventListener("click", async () => {
         frases: {},
       });
 
+      console.log(senhaValue);
+
       // Verificando a resposta bem-sucedida
       if (response.status === 201) {
         window.location.href = "sucesso.html";
       } else if (response.status === 504) {
-        // Caso o erro de usuário já existente
         window.location.href = "erro.html";
       }
     } catch (error) {
