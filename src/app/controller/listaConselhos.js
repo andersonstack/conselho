@@ -1,3 +1,4 @@
+import { conselhoController } from "./conselhoController.js";
 import { api } from "../services/backend.js";
 
 async function listaConselhos() {
@@ -8,10 +9,13 @@ async function listaConselhos() {
     if (response.status === 200) {
       const frases = response.data.data;
 
+      // Limpar a lista antes de adicionar os novos itens
+      conselhoLista.innerHTML = "";
+
       for (const [key, texto] of Object.entries(frases)) {
         const novoConselho = document.createElement("li");
         novoConselho.classList.add("main__lista-item");
-        novoConselho.id = key; // Aqui você pode usar o key como o id do item
+        novoConselho.id = key;
         novoConselho.dataset.listaItem = "";
 
         novoConselho.innerHTML = `
@@ -29,10 +33,21 @@ async function listaConselhos() {
           novoConselho.classList.add("visivel");
         }, 10);
       }
+
+      // Delegação de eventos para os botões dentro do contêiner
+      conselhoLista.addEventListener("click", (event) => {
+        if (event.target.closest(".botao-visualizar")) {
+          conselhoController.verConselho();
+        }
+
+        if (event.target.closest(".botao-remover")) {
+          conselhoController.removerConselho();
+        }
+      });
     }
   } catch (error) {
     console.error("Erro ao buscar conselho:", error);
-    return null; // Retorna null em caso de erro
+    return null;
   }
 }
 

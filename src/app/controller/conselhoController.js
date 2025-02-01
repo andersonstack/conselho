@@ -138,4 +138,8 @@ async function salvarConselho(texto, id) {
 }
 
 // Exporta o controlador de conselho
-export const conselhoController = { salvarConselho };
+export const conselhoController = {
+  salvarConselho,
+  verConselho,
+  removerConselho,
+};
