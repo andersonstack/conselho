@@ -1,12 +1,13 @@
 import { conselhoNavController } from "./controller/conselhoNavController.js";
 import { conselhoController } from "./controller/conselhoController.js";
 import { conselhoService } from "./services/conselhoApi.js";
+import { listaConselhosController } from "./controller/listaConselhos.js";
 
-const api = await conselhoService.conselhoAPI();
+const apiConselho = await conselhoService.conselhoAPI();
 
-if (api) {
-  const textoAPI = api.slip.advice;
-  const textoID = api.slip.id;
+if (apiConselho) {
+  const textoAPI = apiConselho.slip.advice;
+  const textoID = apiConselho.slip.id;
 
   const mainConselho = document.getElementById("cartao__texto");
   mainConselho.textContent = textoAPI;
@@ -22,6 +23,7 @@ if (api) {
 
   const bookmark = document.getElementById("botao__bookmark");
 
+  listaConselhosController.listaConselhos();
   bookmark.addEventListener("click", () =>
     conselhoController.salvarConselho(textoAPI, textoID)
   );
