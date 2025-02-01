@@ -64,7 +64,7 @@ function salvarConselho(texto, id) {
   const isSaved = botaoBookmark.classList.contains("bookmark-salvo");
 
   // Alterna a imagem do botão de bookmark
-  img.src = isSaved ? "assets/selo.png" : "assets/selo-salvo.png";
+  img.src = isSaved ? "../assets/selo.png" : "../assets/selo-salvo.png";
 
   if (!isSaved) {
     botaoBookmark.classList.add("bookmark-salvo");
@@ -75,10 +75,10 @@ function salvarConselho(texto, id) {
     novoConselho.innerHTML = `
   ${texto}
   <button class="main__lista-item-botao botao-visualizar">
-    <img src="assets/icons-black/eye-black.svg" alt="Ver conselho" />
+    <img src="../assets/eye.svg" alt="Ver conselho" />
   </button>
   <button class="main__lista-item-botao botao-remover">
-    <img src="assets/icons-black/remove-black.svg" alt="Remover conselho" />
+    <img src="../assets/remove.svg" alt="Remover conselho" />
   </button>
 `;
     conselhoLista.appendChild(novoConselho);

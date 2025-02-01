@@ -26,7 +26,7 @@ function menuNav() {
 
   // Redireciona ao clicar no botão de logout
   botaoLogout.addEventListener("click", () => {
-    window.location.href = "../screens/login.html";
+    window.location.href = "/index.html";
   });
 
   // Abre ou fecha o menu de navegação ao clicar no botão de menu
@@ -39,7 +39,6 @@ function menuNav() {
       main.style.opacity = 0.5;
     } else {
       menuImagem.style.transform = "scale(1, 1)";
-      menuImagem.src = "assets/icons-black/menu-black-close.svg";
       main.style.opacity = 1;
     }
   });

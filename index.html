@@ -1,90 +1,40 @@
-<!DOCTYPE >
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conselhos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" , href="styles/styles.css" />
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://safi.me.uk/typewriterjs/js/typewriter.js"></script>
-    <script type="module" src="app/main.js" defer></script>
+    <title>Conselhos - Login</title>
+    <link rel="stylesheet" href="src/styles/styles.css" />
+    <script
+      type="module"
+      src="src/app/controller/loginController.js"
+      defer
+    ></script>
   </head>
-  <body>
-    <nav class="menu">
-      <button
-        class="menu__botao"
-        aria-label="Botão de menu"
-        aria-expanded="false"
-      >
-        <img
-          src="assets/icons-black/menu-black-close.svg"
-          alt="Botão de menu"
+  <body class="body__login">
+    <div class="div__login">
+      <h1 class="login__titulo">Login</h1>
+      <form>
+        <input
+          id="email"
+          type="email"
+          class="input__form"
+          required
+          placeholder="Email"
         />
-      </button>
-      <a class="menu__botao-usuario">
-        <img src="assets/icons-black/user-black.svg" alt="Ícone de usuário"
-      /></a>
-      <p class="logout">Sair<img src="assets/icons-black/logout.svg" /></p>
-
-      <ul class="menu__lista">
-        <li class="menu__lista-item">
-          <p>Conselhos</p>
-          <a><img src="assets/icons-black/tips.svg" /></a>
-        </li>
-        <li class="menu__lista-item">
-          <p>Sobre</p>
-          <a><img src="assets/icons-black/info.svg" /></a>
-        </li>
-      </ul>
-    </nav>
-    <main class="main" id="main" data-principal>
-      <h1>Conselhos para você</h1>
-      <div class="cartao" id="cartao" data-principal-div>
-        <button aria-label="Botão de salvar" id="botao__bookmark" data-bookmark>
-          <img class="bookmark" src="assets/selo.png" alt="Imagem de um selo" />
-        </button>
-        <p class="cartao__texto" id="cartao__texto" data-principal-conselho>
-          Quod futurum spectes, scias melius sit quam cogitas.
-        </p>
-        <!-- <div class="buttons" id="buttons" data-botoes>
-          <button
-            aria-label="Botão de mudar de língua"
-            class="cartao__botao-lang"
-            id="cartao__botao-lang"
-            data-botao-lang
-          >
-            Mudar de língua
-          </button>
-          <button
-            aria-label="Botão de mudar de conselho"
-            class="cartao__botao-api"
-            id="cartao__botao-api"
-            data-botao-api
-          >
-            Mudar de conselho
-          </button>
-        </div> -->
+        <input
+          id="senha"
+          type="password"
+          class="input__form"
+          required
+          placeholder="Senha"
+        />
+      </form>
+      <button class="button button__login">Entrar</button>
+      <div class="buttons">
+        <button class="button__forget">Esqueceu a senha ?</button>
+        <button class="button button__sigup">Cadastrar-se</button>
       </div>
-
-      <section class="main__section" id="main__section" data-section>
-        <ul class="main__lista" id="main__lista" data-lista-conselhos></ul>
-      </section>
-    </main>
-
-    <div class="popup" id="popup" data-popup>
-      <a><img src="assets/close.svg" /></a>
     </div>
   </body>
 </html>
