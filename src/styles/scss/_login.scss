@@ -158,3 +158,9 @@ form {
     gap: 2rem;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .div__login {
+    width: 30%;
+  }
+}

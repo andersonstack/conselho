@@ -641,6 +641,11 @@ form input::placeholder {
     gap: 2rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .div__login {
+    width: 30%;
+  }
+}
 .div__sucesso {
   text-align: center;
   padding: 20px;
