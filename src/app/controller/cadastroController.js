@@ -7,7 +7,7 @@ const avisoSenha = document.querySelector(".senha__invalida");
 // Verifica a senha a cada mudança no campo de senha
 senha.addEventListener("input", () => {
   const senhaValue = senha.value;
-  const regex = /^[a-zA-Z]+$/;
+  const regex = /^[a-zA-Z0-9]+$/;
 
   // Se a senha for inválida, exibe o aviso
   if (!regex.test(senhaValue)) {
@@ -20,7 +20,7 @@ senha.addEventListener("input", () => {
 botaoPOST.addEventListener("click", async (event) => {
   event.preventDefault();
   const senhaValue = senha.value;
-  const regex = /^[a-zA-Z]+$/;
+  const regex = /^[a-zA-Z0-9]+$/; // Alterado para permitir números
 
   // Verifica novamente a senha ao tentar enviar o formulário
   if (!regex.test(senhaValue)) {
