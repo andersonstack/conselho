@@ -563,10 +563,6 @@ form input::placeholder {
   border-radius: 0.5rem;
 }
 
-.button__login {
-  width: 80%;
-}
-
 .buttons {
   width: 100%;
   display: flex;
