@@ -1,10 +1,12 @@
 const botaoLogin = document.querySelector(".button__login");
+const paragrafoError = document.querySelector(".aviso__login");
+
 botaoLogin.addEventListener("click", () => {
-  const autenticado = true;
+  const autenticado = false;
   if (autenticado) {
     window.location.href = "src/screens/home.html";
   } else {
-    alert("Usuário ou senha inválidos");
+    paragrafoError.style.display = "block";
   }
 });
 const botaoCadastrar = document.querySelector(".button__sigup");
