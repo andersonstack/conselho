@@ -15,10 +15,12 @@ botaoLogin.addEventListener("click", (event) => {
     })
     .then((response) => {
       if (response.status === 200) {
+        localStorage.setItem("userId", response.data.data.id); // Salva o ID do usuário
         window.location.href = "src/screens/home.html";
       } else if (response.status === 401) {
         paragrafoError.textContent = "Senha inválida.";
         paragrafoError.style.display = "block";
+        return Promise.reject("Senha inválida.");
       }
     })
     .catch((error) => {
