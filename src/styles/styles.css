@@ -498,7 +498,7 @@ li {
   justify-content: space-around;
   padding: 1rem;
   width: 80%; /* A largura padrão será 80% */
-  height: 50%;
+  height: auto;
   border-radius: 1rem;
   box-shadow: 1rem 1rem 0.7rem rgba(0, 0, 0, 0.2);
   transition: width 0.3s ease-in-out; /* Transição suave para a largura */
@@ -510,6 +510,7 @@ li {
   font-size: 3rem;
   font-weight: 500;
   color: #000000;
+  margin-bottom: 0.5rem;
 }
 
 form {
@@ -614,6 +615,28 @@ form input::placeholder {
   text-align: center;
   display: none;
   animation: tremor 0.5s ease-in-out 1;
+}
+
+.aviso {
+  font-family: "Cormorant Upright", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #806d59;
+  opacity: 1;
+  text-align: center;
+  margin: 1rem;
+}
+
+.senha__invalida {
+  font-family: "Cormorant Upright", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: red;
+  opacity: 1;
+  text-align: center;
+  animation: tremor 0.5s ease-in-out 1;
+  margin: 1rem 0;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
