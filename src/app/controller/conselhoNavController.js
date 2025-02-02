@@ -26,7 +26,8 @@ function menuNav() {
 
   // Redireciona ao clicar no botão de logout
   botaoLogout.addEventListener("click", () => {
-    window.location.href = "./index.html";
+    window.location.href =
+      "https://andersonstack.github.io/conselho/index.html";
   });
 
   // Abre ou fecha o menu de navegação ao clicar no botão de menu
