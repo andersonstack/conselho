@@ -38,14 +38,14 @@ botaoPOST.addEventListener("click", async (event) => {
 
       // Verificando a resposta bem-sucedida
       if (response.status === 201) {
-        window.location.href = "sucesso.html";
+        window.location.href = "./sucesso.html";
       } else if (response.status === 504) {
-        window.location.href = "erro.html";
+        window.location.href = "./erro.html";
       }
     } catch (error) {
       // Captura qualquer erro de rede ou outros problemas
       console.error("Erro ao realizar o cadastro:", error);
-      window.location.href = "erro.html"; // Redireciona para a página de erro
+      window.location.href = "./erro.html"; // Redireciona para a página de erro
     }
   }
 });

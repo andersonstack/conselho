@@ -16,7 +16,7 @@ botaoLogin.addEventListener("click", (event) => {
     .then((response) => {
       if (response.status === 200) {
         localStorage.setItem("userId", response.data.user.id); // Salva o ID do usuário
-        window.location.href = "src/screens/home.html";
+        window.location.href = "./src/screens/home.html";
       } else if (response.status === 401) {
         paragrafoError.textContent = "Senha inválida.";
         paragrafoError.style.display = "block";
@@ -31,7 +31,7 @@ botaoLogin.addEventListener("click", (event) => {
 
 const botaoCadastrar = document.querySelector(".button__sigup");
 botaoCadastrar.addEventListener("click", () => {
-  window.location.href = "src/screens/cadastro.html";
+  window.location.href = "./src/screens/cadastro.html";
 });
 const botaoEsqueci = document.querySelector(".button__forget");
 botaoEsqueci.addEventListener("click", () => {
