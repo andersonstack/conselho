@@ -30,7 +30,9 @@ function menuNav() {
   });
 
   // Abre ou fecha o menu de navegação ao clicar no botão de menu
-  menu.addEventListener("click", () => {
+  menu.addEventListener("click", (event) => {
+    event.stopPropagation(); // Impede que o clique em "menu" feche o menu
+
     const isExpanded = menuLista.classList.toggle("ativo");
     menuLista.setAttribute("aria-expanded", isExpanded);
 
@@ -43,10 +45,23 @@ function menuNav() {
     }
   });
 
-  // Fecha o menu de logout se clicar fora
-  document.addEventListener("click", () => {
-    logout.style.visibility = "hidden";
-    logout.style.transform = "translateY(100%)"; // Esconde com efeito
+  // Fecha o menu de navegação ou o menu de logout se clicar fora
+  document.addEventListener("click", (e) => {
+    if (
+      !menu.contains(e.target) &&
+      !menuLista.contains(e.target) &&
+      !logout.contains(e.target) &&
+      !menuPerfil.contains(e.target) // Não fecha o menu ao clicar no perfil
+    ) {
+      menuLista.classList.remove("ativo");
+      menuLista.setAttribute("aria-expanded", "false");
+      menuImagem.style.transform = "scale(1, 1)";
+      main.style.opacity = 1;
+
+      // Esconde o menu de logout
+      logout.style.visibility = "hidden";
+      logout.style.transform = "translateY(100%)";
+    }
   });
 }
 
