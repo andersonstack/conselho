@@ -12,14 +12,14 @@ async function listaConselhos() {
       // Limpar a lista antes de adicionar os novos itens
       conselhoLista.innerHTML = "";
 
-      for (const [key, texto] of Object.entries(frases)) {
+      // Iterar diretamente sobre a lista de frases
+      for (const frase of frases) {
         const novoConselho = document.createElement("li");
         novoConselho.classList.add("main__lista-item");
-        novoConselho.id = key;
         novoConselho.dataset.listaItem = "";
 
         novoConselho.innerHTML = `
-          ${texto}
+          ${frase.fraseValue}
           <button class="main__lista-item-botao botao-visualizar">
             <img src="../assets/eye.svg" alt="Ver conselho" />
           </button>

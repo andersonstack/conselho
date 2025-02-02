@@ -21,17 +21,16 @@ function removerConselho() {
           setTimeout(() => {
             item.remove();
           }, 1000);
-        }
+          const botaoBookmark = document.getElementById("botao__bookmark");
+          const img = botaoBookmark.querySelector("img");
 
-        const botaoBookmark = document.getElementById("botao__bookmark");
-        const img = botaoBookmark.querySelector("img");
-
-        if (
-          botaoBookmark.classList.contains("bookmark-salvo") &&
-          fraseTexto === item.innerHTML.trim()
-        ) {
-          botaoBookmark.classList.remove("bookmark-salvo");
-          img.src = "../assets/selo.png";
+          if (
+            botaoBookmark.classList.contains("bookmark-salvo") &&
+            fraseTexto === item.innerHTML.trim()
+          ) {
+            botaoBookmark.classList.remove("bookmark-salvo");
+            img.src = "../assets/selo.png";
+          }
         } else {
           console.error("Erro ao remover conselho");
         }
@@ -89,13 +88,13 @@ async function salvarConselho(texto, id) {
   const userId = localStorage.getItem("userId");
 
   try {
-    const response = await api.put(`/users/${userId}/frases`, {
+    const response = await api.post(`/users/${userId}/frases`, {
       fraseKey: id, // Envia a chave da frase
       fraseValue: texto, // Envia o valor da frase
     });
 
     // Verifica se a resposta foi bem-sucedida
-    if (response.status === 200) {
+    if (response.status === 201) {
       // Atualiza o estado do botão bookmark
       const isSaved = botaoBookmark.classList.contains("bookmark-salvo");
       img.src = isSaved ? "../assets/selo.png" : "../assets/selo-salvo.png";
