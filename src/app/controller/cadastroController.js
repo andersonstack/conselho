@@ -36,8 +36,6 @@ botaoPOST.addEventListener("click", async (event) => {
         frases: {},
       });
 
-      console.log(senhaValue);
-
       // Verificando a resposta bem-sucedida
       if (response.status === 201) {
         window.location.href = "sucesso.html";
