@@ -720,4 +720,59 @@ form input::placeholder {
 
 .button__back-error:hover {
   transform: scale(1.1);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.about {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 50vw;
+  max-width: 600px;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  background-color: #bca792;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+.about p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+  margin: 1rem;
+}
+.about a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #efdcc9;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.about a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.about.show {
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=styles.css.map */

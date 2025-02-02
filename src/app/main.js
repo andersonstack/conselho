@@ -30,3 +30,26 @@ if (apiConselho) {
     conselhoController.salvarConselho(textoTraduzido, textoID)
   );
 }
+
+const botaoAbout = document.querySelector(".botao__about");
+const about = document.querySelector(".about");
+const main = document.querySelector("main");
+
+botaoAbout.addEventListener("click", () => {
+  console.log("fui clicado");
+  // Mostrar a div "about" com a animação
+  about.classList.add("show");
+
+  // Diminuir a opacidade do main
+  main.style.opacity = "0.5";
+});
+
+// Fechar a div ao clicar fora dela
+document.addEventListener("click", (e) => {
+  if (!about.contains(e.target) && !botaoAbout.contains(e.target)) {
+    // Corrigido para 'botaoAbout'
+    // Esconder a div "about" e restaurar a opacidade do main
+    about.classList.remove("show");
+    main.style.opacity = "1";
+  }
+});

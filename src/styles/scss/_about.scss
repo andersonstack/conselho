@@ -1,0 +1,54 @@
+@use "./variaveis" as *;
+@use "./mixins" as *;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.about {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 50vw;
+  max-width: 600px; // Opcional, ajusta o tamanho máximo
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%); // Centraliza no meio da tela
+  background-color: #bca792;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+
+  p {
+    @include aplicar_font($font-principal, 1rem, 400, $cor-fonte);
+    text-align: center;
+    margin: 1rem;
+  }
+
+  a {
+    @include aplicar_font($font-principal, 1rem, 400, $cor-primaria);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.about.show {
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+}
